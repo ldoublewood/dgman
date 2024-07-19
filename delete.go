@@ -18,8 +18,8 @@ package dgman
 
 import (
 	"bytes"
+	"github.com/dgraph-io/dgo/v230/protos/api"
 
-	"github.com/dgraph-io/dgo/v210/protos/api"
 	"github.com/pkg/errors"
 )
 

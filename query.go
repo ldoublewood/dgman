@@ -19,16 +19,15 @@ package dgman
 import (
 	"context"
 	stdjson "encoding/json"
+	"github.com/dgraph-io/dgo/v230"
 	"reflect"
 
 	"fmt"
 	"strconv"
 	"strings"
 
-	"github.com/dgraph-io/dgo/v210/protos/api"
+	"github.com/dgraph-io/dgo/v230/protos/api"
 	"github.com/pkg/errors"
-
-	"github.com/dgraph-io/dgo/v210"
 )
 
 var (

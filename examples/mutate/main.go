@@ -3,20 +3,19 @@ package main
 import (
 	"context"
 	"fmt"
+	"github.com/dgraph-io/dgo/v230"
 	"time"
 
 	"github.com/dolan-in/dgman/v2"
 
-	"github.com/dgraph-io/dgo/v210"
-
-	"github.com/dgraph-io/dgo/v210/protos/api"
+	"github.com/dgraph-io/dgo/v230/protos/api"
 	"google.golang.org/grpc"
 )
 
 // User is a node, nodes have a uid field
 type User struct {
 	UID      string     `json:"uid,omitempty"`
-	Name     string     `json:"name,omitempty" dgraph:"index=term"`                   // use term index
+	Name     string     `json:"fullName,omitempty" dgraph:"index=term"`               // use term index
 	Username string     `json:"username,omitempty" dgraph:"index=hash upsert unique"` // use hash index
 	Email    string     `json:"email,omitempty" dgraph:"index=hash upsert unique"`    // use hash index, use upsert directive
 	Password string     `json:"password,omitempty"`
